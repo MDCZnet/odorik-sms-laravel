@@ -15,7 +15,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Odorik\\Sms\\": "src/"
+            "Odorik\\Sms\\": "src/",
+            "Odorik\\Sms\\Facades\\": "src/Facades/"
         }
     },
     "extra": {
