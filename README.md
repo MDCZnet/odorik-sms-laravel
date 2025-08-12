@@ -37,7 +37,8 @@ use Odorik\Sms\OdorikSmsService;
 
 public function sendSms(OdorikSmsService $odorik)
 {
-    $response = $odorik->sendSms('00420724000000', 'Test message');
+    $recipient = '00420724000000'; // insert recipient number in international format
+    $response = $odorik->sendSms($recipient, 'Test message');
     // handle $response
 }
 ```
@@ -49,7 +50,8 @@ use Odorik\Sms\Facades\OdorikSms;
 
 public function sendViaFacade()
 {
-    $response = OdorikSms::sendSms('00420724000000', 'Test via facade!');
+    $recipient = '00420724000000'; // insert recipient number in international format
+    $response = OdorikSms::sendSms($recipient, 'Test via facade!');
     // handle $response
 }
 ```
@@ -69,9 +71,10 @@ use Odorik\Sms\OdorikSmsService;
 
 public function sendSmsWithSender(OdorikSmsService $odorik)
 {
+    $recipient = '00420724000000'; // insert recipient number in international format
     $allowedSenders = $odorik->getAllowedSenders();
     $sender = $allowedSenders[0]; // or any allowed sender
-    $response = $odorik->sendSms('00420724000000', 'Test message', $sender);
+    $response = $odorik->sendSms($recipient, 'Test message', $sender);
     // handle $response
 }
 ```
@@ -83,9 +86,10 @@ use Odorik\Sms\Facades\OdorikSms;
 
 public function sendSmsWithSenderFacade()
 {
+    $recipient = '00420724000000'; // insert recipient number in international format
     $allowedSenders = OdorikSms::getAllowedSenders();
     $sender = $allowedSenders[0]; // or any allowed sender
-    $response = OdorikSms::sendSms('00420724000000', 'Test message', $sender);
+    $response = OdorikSms::sendSms($recipient, 'Test message', $sender);
     // handle $response
 }
 ```
