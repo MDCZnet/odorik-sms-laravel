@@ -1,0 +1,30 @@
+{
+    "name": "mdcznet/odorik-sms-laravel",
+    "description": "Laravel service for sending SMS via Odorik API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Dittrich",
+            "homepage": "https://MDCZ.net"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Odorik\\Sms\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Odorik\\Sms\\OdorikSmsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
